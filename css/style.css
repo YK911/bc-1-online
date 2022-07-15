@@ -551,7 +551,7 @@ img {
   width: 100%;
   height: 100%;
 
-  color: red;
+  color: #303030;
 
   background-color: #fff;
   border-radius: 50%;
@@ -559,8 +559,8 @@ img {
 
 .socials-link:hover,
 .socials-link:focus {
-  color: lightblue;
-  background-color: grey;
+  color: #ff6c00;
+  background-color: lightblue;
 }
 
 .socials-icon {
@@ -677,11 +677,6 @@ img {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
-  color: #ff6c00;
-}
-
-.contacts-link:hover {
   color: #9da4bd;
 }
 
