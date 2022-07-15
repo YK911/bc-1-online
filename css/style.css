@@ -266,6 +266,10 @@ img {
 
 /*--------------- ABOUT-------------- */
 
+.about {
+  /* background-image: url(../img/hero-img.svg); */
+}
+
 .about > .container {
   display: flex;
 }
@@ -506,6 +510,8 @@ img {
 }
 
 .barbers-item-text {
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -520,6 +526,56 @@ img {
 .barbers-item {
   width: calc((100% - 60px) / 3);
 }
+
+/**
+  |============================
+  | Social icons
+  |============================
+*/
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-item {
+  width: 44px;
+  height: 44px;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  color: red;
+
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: lightblue;
+  background-color: grey;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* зміна заливки іконки при ховері на посилання */
+/* .socials-icon {
+  fill: #303030;
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #ff6c00;
+} */
 
 /*--------------- GALLERY-------------- */
 
@@ -594,21 +650,38 @@ img {
   margin-bottom: 70px;
 }
 .contacts-address-item {
+  margin-bottom: var(--typical-margin);
+  display: inline-flex;
+  gap: 16px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
-  margin-bottom: var(--typical-margin);
+}
+
+.contacts-address-icon {
+  margin-top: 6px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
 }
 
 .contacts-item {
   margin-bottom: var(--typical-margin);
 }
 .contacts-link {
+  display: inline-flex;
+  gap: 16px;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+
+  color: #ff6c00;
+}
+
+.contacts-link:hover {
   color: #9da4bd;
 }
 
@@ -664,4 +737,19 @@ img {
   width: 60px;
   height: 1px;
   background-color: #303030;
+}
+
+/**
+  |============================
+  | Керування декількома кольорами іконок
+  |============================
+*/
+.icons {
+  --color1: salmon;
+  --color2: lightblue;
+}
+
+.icons:hover {
+  --color1: red;
+  --color2: yellow;
 }
