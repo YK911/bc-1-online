@@ -9,7 +9,10 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+
+  /* background-image: url(https://images.rawpixel.com/image_png_1300/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yNDAtYWV3LTEyOC1rejl1dWF0cS5wbmc.png);
+  background-size: 300px 300px; */
 }
 
 p,
@@ -41,6 +44,11 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .link {
@@ -72,11 +80,37 @@ img {
 }
 
 .pre-title {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.pre-title::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+}
+
+.pre-title-theme-light {
+  color: #303030;
+}
+.pre-title-theme-light::before {
+  background-color: #303030;
+}
+
+.pre-title-theme-dark {
+  color: rgba(157, 164, 189, 0.6);
+}
+.pre-title-theme-dark::before {
+  background-color: rgba(157, 164, 189, 0.6);
 }
 
 .btn {
@@ -100,7 +134,7 @@ img {
 }
 
 .title {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 42px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
@@ -168,12 +202,35 @@ img {
 }
 .hero-content {
   flex-grow: 1;
-  background-color: #454040;
   padding: 272px 100px 206px;
+
+  background-color: rgba(25, 28, 38, 0.2);
+  /* background-image: url(../img/hero/slider-img.jpg),
+    url(../img/sinval-carvalho-WbEibGKHBMY-unsplash.jpg); */
+  /* background-image: linear-gradient(
+      rgba(255, 0, 0, 0.4) 100px,
+      rgba(136, 255, 0, 0.4) 100px,
+      rgba(136, 255, 0, 0.4) 300px,
+      rgba(0, 64, 255, 0.4) 300px
+    ),
+    url(../img/hero/slider-img.jpg); */
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero/slider-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-list {
   width: 100px;
+}
+
+.hero-list::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-link {
@@ -189,13 +246,18 @@ img {
 }
 
 .hero-title {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
-  font-size: 72px;
+  font-size: 150px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: #ffffff;
   margin-bottom: var(--typical-margin);
+
+  background-image: url(../img/sinval-carvalho-WbEibGKHBMY-unsplash.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .hero-after-title {
   color: #9da4bd;
@@ -248,7 +310,15 @@ img {
 /*--------------- PRICES-------------- */
 
 .prices {
-  background-color: #303030;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #111319;
+  background-image: url(../img/price/price-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .prices-wrap {
@@ -265,7 +335,7 @@ img {
 }
 
 .prices-list {
-  border: 1px solid #ffffff;
+  /* border: 1px solid #ffffff; */
   padding: 30px 40px;
   flex-grow: 1;
   display: flex;
@@ -273,16 +343,41 @@ img {
   row-gap: 20px;
 }
 
+.prices-list:first-child {
+  background-image: linear-gradient(180deg #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
 .prices-item {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
+  gap: 4px;
+}
+
+.prices-item::before {
+  content: "";
+  /* display: block;
+  width: 100%; */
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  /* border-bottom: 1px dashed rgba(157, 164, 189, 0.12); */
 }
 
 .prices-item-text {
+  /* flex-shrink: 0; */
+
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+.prices-item-text:first-child {
+  order: -1;
 }
 
 .prices-btn {
@@ -294,6 +389,9 @@ img {
 /*--------------- BENEFITS-------------- */
 .benefits {
   padding-top: 121px;
+  /* background-image: url(../img/unsplash.jpg);
+  background-size: 1354px 2016px;
+  background-attachment: fixed; */
 }
 
 .benefits > .container {
@@ -379,6 +477,10 @@ img {
 
 /*--------------- BARBERS-------------- */
 
+.barbers {
+  background-color: #f7f7f7;
+}
+
 .barbers-pre-title {
   color: #303030;
   margin-bottom: var(--typical-margin);
@@ -448,7 +550,17 @@ img {
 } */
 
 .contacts-wrap {
-  background-color: #000000;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #191c26;
+  background-image: url(../img/contacts/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  /* background-position: top 50% right calc(50% - 325px); */
+
+  background-size: contain;
 }
 
 .contacts-wrap .container {
@@ -543,5 +655,13 @@ img {
 
 .footer-list {
   display: flex;
+  align-items: center;
   gap: 40px;
+}
+
+.footer-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
