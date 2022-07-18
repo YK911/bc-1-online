@@ -7,8 +7,8 @@
   --accent-color: #ff6c00;
   --typical-margin: 20px;
 
-  --anim-slow: 400ms ease-in;
-  --anim-fast: 1200ms ease-in;
+  --anim-slow: 500ms ease-in;
+  --anim-fast: 300ms ease-in;
 }
 
 body {
@@ -196,6 +196,7 @@ img {
 
 .header-link,
 .header-tel {
+  position: relative;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -212,6 +213,20 @@ img {
 .header-link:hover,
 .header-link:focus {
   color: #ff6c00;
+}
+
+.header-link-current::after {
+  content: "";
+
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .header-btn {
@@ -236,8 +251,20 @@ img {
   background-position: center;
 }
 
-.hero-list {
+.hero-wrap {
+  position: relative;
   width: 100px;
+}
+
+.hero-list {
+  position: absolute;
+  left: 27px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
 }
 
 .hero-list::before {
@@ -351,10 +378,21 @@ img {
   margin-right: 64px;
 }
 
+.about-item {
+  overflow: hidden;
+}
+
 .about-item + .about-item {
   margin-left: 30px;
 }
 
+.about-img {
+  transition: transform 800ms;
+}
+
+.about-item:hover .about-img {
+  transform: scale(1.3);
+}
 .about-pre-title {
   color: #303030;
   margin-bottom: var(--typical-margin);
@@ -556,6 +594,39 @@ img {
 .barbers-title {
   color: var(--second-title-color);
   margin-bottom: 44px;
+}
+
+.barbers-item-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.barbers-item {
+  outline: 2px solid red;
+  outline-offset: -2px;
+  /* position: relative;
+  overflow: hidden; */
+}
+
+.barbers-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  transition: transform var(--anim-slow);
+}
+
+.barbers-item:hover .barbers-item-overlay {
+  transform: translateY(0);
 }
 
 .barbers-item-wrap {
@@ -817,6 +888,10 @@ img {
 
   background-color: rgba(0, 0, 0, 0.3);
 
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
   transition: opacity var(--anim-slow), visibility var(--anim-slow);
 }
 
@@ -830,12 +905,40 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%) scale(1) rotate(0); */
+  /* opacity: 1; */
 
   width: 400px;
   height: 500px;
   background-color: #fff;
   border-radius: 10px;
+
+  /* transition: transform 400ms, opacity 400ms; */
+
+  animation: zoom-in 600ms ease 300ms alternate both;
+  animation-play-state: running;
+}
+
+.backdrop.is-hidden .modal {
+  animation-play-state: paused;
+  /* transform: translate(-50%, -50%) scale(0.4) rotate(360deg); */
+  /* opacity: 0; */
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .modal-btn {

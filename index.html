@@ -19,6 +19,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Бібліотека з анімаціями на keyframes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Бібліотека з анімаціями із прив'язкою до скролу -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -31,7 +39,7 @@
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="header-item">
-              <a class="header-link link" href="#about">About</a>
+              <a class="header-link header-link-current link" href="#about">About</a>
             </li>
             <li class="header-item">
               <a class="header-link link" href="#prices">Services and prices</a>
@@ -46,28 +54,36 @@
         </nav>
         <div class="header-connect">
           <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-          <button class="header-btn btn" type="button" data-modal-open>Online-booking</button>
+          <button
+            class="header-btn btn animate__animated animate__shakeX animate__delay-2s"
+            type="button"
+            data-modal-open
+          >
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a href="" target="_blank" rel="noopener noreferrer" class="hero-link link"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a href="" target="_blank" rel="noopener noreferrer" class="hero-link link"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-wrap">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a href="" target="_blank" rel="noopener noreferrer" class="hero-link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a href="" target="_blank" rel="noopener noreferrer" class="hero-link link"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-content">
             <p class="pre-title pre-title-theme-dark">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title">BarberShop</h1>
+            <h1 class="hero-title animate__animated animate__jackInTheBox">BarberShop</h1>
             <p class="hero-after-title after-title">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
@@ -91,10 +107,22 @@
         <div class="container">
           <ul class="about-list list">
             <li class="about-item">
-              <img src="./img/about-img-1.jpeg" alt="haircuts1" width="270" height="445" />
+              <img
+                class="about-img"
+                src="./img/about-img-1.jpeg"
+                alt="haircuts1"
+                width="270"
+                height="445"
+              />
             </li>
             <li class="about-item">
-              <img src="./img/about-img-2.jpeg" alt="haircuts2" width="270" height="445" />
+              <img
+                class="about-img"
+                src="./img/about-img-2.jpeg"
+                alt="haircuts2"
+                width="270"
+                height="445"
+              />
             </li>
           </ul>
           <div class="about-content">
@@ -113,7 +141,7 @@
           </div>
         </div>
       </section>
-      <section class="prices section" id="prices">
+      <section class="prices section" data-aos="fade-up" id="prices">
         <div class="container">
           <p class="pre-title pre-title-theme-dark">spend your time with the best masters</p>
           <h2 class="prices-title title">Services and prices</h2>
@@ -211,13 +239,21 @@
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img src="./img/barber-img-1.jpeg" alt="barber 1" />
+              <div class="barbers-item-thumb">
+                <img
+                  class="barbers-item-img"
+                  src="./img/barber-img-1.jpeg"
+                  alt="barber 1"
+                  width="370"
+                />
+                <p class="barbers-item-overlay">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                </p>
+              </div>
               <div class="barbers-item-wrap">
                 <h3 class="barbers-item-title">Michele Doe</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
-                <!-- <svg width="" height="">
-                  <use href="./img/sprite.svg#connection"></use>
-                </svg> -->
                 <ul class="socials list">
                   <li class="socials-item">
                     <a class="socials-link" href="">
@@ -332,16 +368,36 @@
           <p class="pre-title pre-title-theme-light">in Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
-            <li class="gallery-item" data-sale="Sale 20%">
+            <li
+              class="gallery-item"
+              data-aos="fade-right"
+              data-aos-delay="250"
+              data-sale="Sale 20%"
+            >
               <img src="./img/gallary-img-1.jpeg" alt="gallery 1" />
             </li>
-            <li class="gallery-item" data-sale="Sale 10%">
+            <li
+              class="gallery-item"
+              data-aos="fade-right"
+              data-aos-delay="550"
+              data-sale="Sale 10%"
+            >
               <img src="./img/gallary-img-2.jpeg" alt="gallery 2" />
             </li>
-            <li class="gallery-item" data-sale="Sale 40%">
+            <li
+              class="gallery-item"
+              data-aos="fade-right"
+              data-aos-delay="750"
+              data-sale="Sale 40%"
+            >
               <img src="./img/gallary-img-3.jpeg" alt="gallery 3" />
             </li>
-            <li class="gallery-item" data-sale="Sale 30%">
+            <li
+              class="gallery-item"
+              data-aos="fade-right"
+              data-aos-delay="950"
+              data-sale="Sale 30%"
+            >
               <img src="./img/gallary-img-4.jpeg" alt="gallery 4" />
             </li>
           </ul>
@@ -414,5 +470,7 @@
 
     <script src="./js/header-scroll.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
   </body>
 </html>
