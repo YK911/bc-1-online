@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body>
-    <header class="header">
+  <body id="page">
+    <header class="header" id="header">
       <div class="container">
         <a href="" class="header-logo">
           <img src="./img/logo.svg" alt="site logo" />
@@ -31,22 +31,22 @@
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="header-item">
-              <a href="https://www.google.com/" class="header-link link">About</a>
+              <a class="header-link link" href="#about">About</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link link">Services and prices</a>
+              <a class="header-link link" href="#prices">Services and prices</a>
             </li>
             <li class="header-item">
-              <a href="#barbers" class="header-link link">Barbers</a>
+              <a class="header-link link" href="#barbers">Barbers</a>
             </li>
             <li class="header-item">
-              <a href="https://www.google.com/" class="header-link link">Contacts</a>
+              <a class="header-link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
         <div class="header-connect">
           <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-          <button type="button" class="header-btn btn">Online-booking</button>
+          <button class="header-btn btn" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -71,16 +71,23 @@
             <p class="hero-after-title after-title">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
-            <!-- <p class="hero-after-title after-title">
-              м. Львів<br />
-              вул. Зелена<br />
-              буд. 7б, кв. 12<br />
-              метро С. Бандери
-            </p> -->
+            <ul class="slider-controls list">
+              <li class="slider-controls-item">
+                <button class="slider-btn disabled" type="button">Back</button>
+              </li>
+              <li class="slider-controls-item">
+                <button class="slider-btn" type="button">Forward</button>
+              </li>
+            </ul>
+            <ul class="slider-pagination list">
+              <li class="slider-pagination-item active"></li>
+              <li class="slider-pagination-item"></li>
+              <li class="slider-pagination-item"></li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="container">
           <ul class="about-list list">
             <li class="about-item">
@@ -106,7 +113,7 @@
           </div>
         </div>
       </section>
-      <section class="prices section">
+      <section class="prices section" id="prices">
         <div class="container">
           <p class="pre-title pre-title-theme-dark">spend your time with the best masters</p>
           <h2 class="prices-title title">Services and prices</h2>
@@ -198,7 +205,7 @@
           </div>
         </div>
       </section>
-      <section id="barbers" class="barbers section">
+      <section class="barbers section" id="barbers">
         <div class="container">
           <p class="pre-title pre-title-theme-light">for true enjoyers of the atmosphere</p>
           <h2 class="barbers-title title">Our barbers</h2>
@@ -325,47 +332,25 @@
           <p class="pre-title pre-title-theme-light">in Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
-            <li class="gallery-item">
+            <li class="gallery-item" data-sale="Sale 20%">
               <img src="./img/gallary-img-1.jpeg" alt="gallery 1" />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item" data-sale="Sale 10%">
               <img src="./img/gallary-img-2.jpeg" alt="gallery 2" />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item" data-sale="Sale 40%">
               <img src="./img/gallary-img-3.jpeg" alt="gallery 3" />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item" data-sale="Sale 30%">
               <img src="./img/gallary-img-4.jpeg" alt="gallery 4" />
             </li>
           </ul>
         </div>
       </section>
-      <div class="contacts-wrap">
+      <div class="contacts-wrap" id="contacts">
         <div class="container">
           <section class="online section">
             <h2 class="online-title title">Online-booking</h2>
-            <ul class="list">
-              <li>
-                <svg class="icons" width="70" height="70">
-                  <use href="./img/symbol-defs.svg#antenna"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icons" width="70" height="70">
-                  <use href="./img/symbol-defs.svg#astronaut"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icons" width="70" height="70">
-                  <use href="./img/symbol-defs.svg#clock"></use>
-                </svg>
-              </li>
-              <li>
-                <svg class="icons" width="70" height="70">
-                  <use href="./img/symbol-defs.svg#diagram"></use>
-                </svg>
-              </li>
-            </ul>
           </section>
           <section class="contacts section">
             <h2 class="contacts-title title">Contacts</h2>
@@ -419,5 +404,15 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>X</button>
+      </div>
+    </div>
+
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
