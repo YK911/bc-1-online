@@ -407,6 +407,41 @@
         <div class="container">
           <section class="online section">
             <h2 class="online-title title">Online-booking</h2>
+            <form class="contacts-form" name="contact-form">
+              <div class="contacts-form-group">
+                <label class="contacts-form-field">
+                  <input
+                    class="contacts-form-input"
+                    name="user-name"
+                    type="text"
+                    required
+                    minlength="2"
+                    placeholder="Antony Black"
+                  />
+                  <span class="contacts-form-label">name&ast;</span>
+                </label>
+                <label class="contacts-form-field">
+                  <input
+                    class="contacts-form-input"
+                    name="user-phone"
+                    type="tel"
+                    required
+                    placeholder="+38 (099) 123-45-67"
+                  />
+                  <span class="contacts-form-label">phone&ast;</span>
+                </label>
+              </div>
+              <label class="contacts-form-message">
+                <textarea
+                  class="contacts-form-textarea"
+                  name="user-message"
+                  rows="5"
+                  placeholder=" "
+                ></textarea>
+                <span class="contacts-form-label">message</span>
+              </label>
+              <button class="btn contacts-form-btn" type="submit">send</button>
+            </form>
           </section>
           <section class="contacts section">
             <h2 class="contacts-title title">Contacts</h2>
