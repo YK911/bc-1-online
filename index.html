@@ -419,12 +419,18 @@
                     placeholder="Antony Black"
                   />
                   <span class="contacts-form-label">name&ast;</span>
+                  <svg class="contacts-form-icon" width="20" height="20">
+                    <use class="icon-check" href="./img/sprite.svg#icon-check"></use>
+                    <use class="icon-alert" href="./img/sprite.svg#icon-alert"></use>
+                  </svg>
+                  <span class="message-alert">Minimum two characters</span>
                 </label>
                 <label class="contacts-form-field">
                   <input
                     class="contacts-form-input"
                     name="user-phone"
                     type="tel"
+                    id="user-phone"
                     required
                     placeholder="+38 (099) 123-45-67"
                   />
@@ -440,6 +446,42 @@
                 ></textarea>
                 <span class="contacts-form-label">message</span>
               </label>
+
+              <label class="contacts-form-agreement">
+                <input
+                  class="contacts-form-checkbox visually-hidden"
+                  type="checkbox"
+                  name="user-agreement"
+                  checked
+                />
+                <span class="contacts-form-custom-checkbox">
+                  <svg class="contacts-form-checkbox-icon" width="17" height="13">
+                    <use href="./img/sprite.svg#checkbox-check"></use>
+                  </svg>
+                </span>
+                <span class="contacts-form-desc"
+                  >I accept <a class="contacts-form-policy" href="">Privacy policy</a></span
+                >
+              </label>
+
+              <!-- <label class="agreement" for="checkbox">
+                <input
+                  class="checkbox visually-hidden"
+                  type="checkbox"
+                  name="user-agreement"
+                  checked
+                  id="checkbox"
+                />
+                <span class="custom-checkbox">
+                  <svg class="checkbox-icon" width="16" height="15">
+                    <use href="./img/sprite.svg#check"></use>
+                  </svg>
+                </span>
+                <span class="agreement-desc"
+                  >I accept <a class="agreement-link" href="">Privacy policy</a></span
+                >
+              </label> -->
+
               <button class="btn contacts-form-btn" type="submit">send</button>
             </form>
           </section>
@@ -502,6 +544,20 @@
         <button class="modal-btn" type="button" data-modal-close>X</button>
       </div>
     </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/inputmask.min.js"
+      integrity="sha512-DVfS/GbZzLMmxBL/CW92N84eHP2Fq9d+r9RKbvctcvzISVfu+WvD+MCvbK9j8I6nVLrntGo3UUVrNFUDX0ukBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/mask.js"></script>
 
     <script src="./js/header-scroll.js"></script>
     <script src="./js/modal.js"></script>

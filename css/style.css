@@ -783,6 +783,7 @@ img {
 .contacts-form-input {
   width: 100%;
   height: 24px;
+  padding-right: 25px;
 
   font-weight: 600;
   font-size: 11px;
@@ -801,6 +802,15 @@ img {
   border-color: #ffffff;
 }
 
+.contacts-form-input:required:focus:valid:not(:placeholder-shown),
+.contacts-form-input:required:valid:not(:placeholder-shown) {
+  border-color: rgb(0, 109, 0);
+}
+
+.contacts-form-input:required:focus:invalid:not(:placeholder-shown) {
+  border-color: rgb(255, 230, 0);
+}
+
 .contacts-form-input::placeholder {
   opacity: 0;
   transition: opacity var(--anim-fast) 50ms;
@@ -814,6 +824,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -829,6 +840,52 @@ img {
 .contacts-form-input:not(:placeholder-shown) + .contacts-form-label {
   color: #fff;
   transform: translateY(-15px) scale(0.7);
+}
+
+.contacts-form-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon-check {
+  opacity: 0;
+  fill: rgb(0, 109, 0);
+  transition: opacity var(--anim-fast);
+}
+.icon-alert {
+  opacity: 0;
+  fill: rgb(255, 230, 0);
+  transition: opacity var(--anim-fast);
+}
+/* невалідні дані */
+.contacts-form-input:required:focus:invalid:not(:placeholder-shown)
+  ~ .contacts-form-icon
+  .icon-alert {
+  opacity: 1;
+}
+/* валідні дані */
+.contacts-form-input:required:focus:valid:not(:placeholder-shown) ~ .contacts-form-icon .icon-check,
+.contacts-form-input:required:valid:not(:placeholder-shown) ~ .contacts-form-icon .icon-check {
+  opacity: 1;
+}
+
+.message-alert {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  color: rgb(255, 230, 0);
+
+  opacity: 0;
+  transition: opacity var(--anim-fast);
+}
+
+.contacts-form-input:required:focus:invalid:not(:placeholder-shown) ~ .message-alert {
+  opacity: 1;
 }
 
 .contacts-form-message {
@@ -868,6 +925,72 @@ img {
 
 .contacts-form-btn {
   color: #ffffff;
+}
+
+/* form agreement */
+.contacts-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 44px;
+  color: #f7f7f7;
+}
+
+.contacts-form-custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.contacts-form-checkbox-icon {
+  opacity: 0;
+  transition: opacity var(--anim-fast);
+}
+
+.contacts-form-checkbox:checked + .contacts-form-custom-checkbox .contacts-form-checkbox-icon {
+  opacity: 1;
+}
+
+.contacts-form-desc {
+  user-select: none;
+}
+
+.contacts-form-policy {
+  color: #ff6c00;
+}
+
+/*  */
+.agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #9da4bd;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+
+  outline: 2px solid #212121;
+  outline-offset: -2px;
+  border-radius: 2px;
+
+  transition: outline-color 250ms, background-color 250ms;
+}
+
+.checkbox:checked + .custom-checkbox {
+  outline-color: #2196f3;
+  background-color: #2196f3;
 }
 
 /* --------------- CONTACTS -------------- */
