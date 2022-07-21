@@ -32,30 +32,30 @@
 
   <body id="page">
     <header class="header" id="header">
-      <div class="container">
-        <a href="" class="header-logo">
+      <div class="container header__container">
+        <a href="" class="logo header__logo">
           <img src="./img/logo.svg" alt="site logo" />
         </a>
-        <nav class="header-nav">
+        <nav class="nav">
           <ul class="header-list list">
-            <li class="header-item">
-              <a class="header-link header-link-current link" href="#about">About</a>
+            <li class="header-list__item">
+              <a class="header-list__link header-list__link--current link" href="#about"> About </a>
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="#prices">Services and prices</a>
+            <li class="header-list__item">
+              <a class="header-list__link link" href="#prices">Services and prices</a>
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="#barbers">Barbers</a>
+            <li class="header-list__item">
+              <a class="header-list__link link" href="#barbers">Barbers</a>
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="#contacts">Contacts</a>
+            <li class="header-list__item">
+              <a class="header-list__link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header-connect">
-          <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
+        <div class="header__connect">
+          <a href="tel:+380441111111" class="header__tel link">+38 044 111 11 11</a>
           <button
-            class="header-btn btn animate__animated animate__shakeX animate__delay-2s"
+            class="btn header__btn animate__animated animate__shakeX animate__delay-2s"
             type="button"
             data-modal-open
           >
@@ -66,7 +66,7 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container">
+        <div class="container hero__container">
           <div class="hero-wrap">
             <ul class="hero-list list">
               <li class="hero-item">
@@ -82,9 +82,9 @@
             </ul>
           </div>
           <div class="hero-content">
-            <p class="pre-title pre-title-theme-dark">A hair salon for men in Kyiv</p>
+            <p class="pretitle pretitle--theme-dark">A hair salon for men in Kyiv</p>
             <h1 class="hero-title animate__animated animate__jackInTheBox">BarberShop</h1>
-            <p class="hero-after-title after-title">
+            <p class="hero-subtitle subtitle subtitle--theme-dark">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
             <ul class="slider-controls list">
@@ -126,9 +126,9 @@
             </li>
           </ul>
           <div class="about-content">
-            <p class="pre-title pre-title-theme-light">About</p>
+            <p class="about-pre-title pretitle pretitle--theme-light">About</p>
             <h2 class="about-title title">Best Barbershop in your city</h2>
-            <p class="about-after-title after-title">
+            <p class="about-subtitle subtitle subtitle--theme-light">
               If you want to add more confidence to your image, you should definitely visit us.
             </p>
             <p class="about-text">
@@ -143,7 +143,7 @@
       </section>
       <section class="prices section" data-aos="fade-up" id="prices">
         <div class="container">
-          <p class="pre-title pre-title-theme-dark">spend your time with the best masters</p>
+          <p class="pretitle pretitle--theme-dark">spend your time with the best masters</p>
           <h2 class="prices-title title">Services and prices</h2>
           <div class="prices-wrap">
             <ul class="prices-list list">
@@ -224,9 +224,9 @@
           </div>
 
           <div class="benefits-content">
-            <p class="pre-title pre-title-theme-light">old traditional school</p>
+            <p class="benefits-pretitle pretitle pretitle--theme-light">old traditional school</p>
             <h2 class="benefits-title title">Why people come to us?</h2>
-            <p class="benefits-after-title after-title">
+            <p class="subtitle subtitle--theme-light">
               Only good things are said about us. But it's better to see and feel 1 time than read
               10 times.
             </p>
@@ -235,25 +235,25 @@
       </section>
       <section class="barbers section" id="barbers">
         <div class="container">
-          <p class="pre-title pre-title-theme-light">for true enjoyers of the atmosphere</p>
-          <h2 class="barbers-title title">Our barbers</h2>
-          <ul class="barbers-list list">
-            <li class="barbers-item">
-              <div class="barbers-item-thumb">
+          <p class="pretitle pretitle--theme-light">for true enjoyers of the atmosphere</p>
+          <h2 class="title barbers__title">Our barbers</h2>
+          <ul class="barbers__list list">
+            <li class="barbers__item">
+              <div class="overlay">
                 <img
-                  class="barbers-item-img"
+                  class="overlay__img"
                   src="./img/barber-img-1.jpeg"
                   alt="barber 1"
                   width="370"
                 />
-                <p class="barbers-item-overlay">
+                <p class="overlay__text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
                 </p>
               </div>
-              <div class="barbers-item-wrap">
-                <h3 class="barbers-item-title">Michele Doe</h3>
-                <p class="barbers-item-text">Extreme Barber</p>
+              <div class="barbers__item-wrap">
+                <h3 class="barbers__item-title">Michele Doe</h3>
+                <p class="barbers__item-text">Extreme Barber</p>
                 <ul class="socials list">
                   <li class="socials-item">
                     <a class="socials-link" href="">
@@ -286,11 +286,22 @@
                 </ul>
               </div>
             </li>
-            <li class="barbers-item">
-              <img src="./img/barber-img-3.jpeg" alt="barber 3" />
-              <div class="barbers-item-wrap">
-                <h3 class="barbers-item-title">Alan Black</h3>
-                <p class="barbers-item-text">Extreme Barber</p>
+            <li class="barbers__item">
+              <div class="overlay">
+                <img
+                  class="overlay__img"
+                  src="./img/barber-img-2.jpeg"
+                  alt="barber 1"
+                  width="370"
+                />
+                <p class="overlay__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                </p>
+              </div>
+              <div class="barbers__item-wrap">
+                <h3 class="barbers__item-title">Alan Black</h3>
+                <p class="barbers__item-text">Extreme Barber</p>
                 <ul class="socials list">
                   <li class="socials-item">
                     <a class="socials-link" href="">
@@ -323,11 +334,22 @@
                 </ul>
               </div>
             </li>
-            <li class="barbers-item">
-              <img src="./img/barber-img-3.jpeg" alt="barber 3" />
-              <div class="barbers-item-wrap">
-                <h3 class="barbers-item-title">Alan Black</h3>
-                <p class="barbers-item-text">Extreme Barber</p>
+            <li class="barbers__item">
+              <div class="overlay">
+                <img
+                  class="overlay__img"
+                  src="./img/barber-img-1.jpeg"
+                  alt="barber 1"
+                  width="370"
+                />
+                <p class="overlay__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                </p>
+              </div>
+              <div class="barbers__item-wrap">
+                <h3 class="barbers__item-title">Alan Black</h3>
+                <p class="barbers__item-text">Extreme Barber</p>
                 <ul class="socials list">
                   <li class="socials-item">
                     <a class="socials-link" href="">
@@ -365,7 +387,7 @@
       </section>
       <section class="gallery section">
         <div class="container">
-          <p class="pre-title pre-title-theme-light">in Latin, "barba" means "beard"</p>
+          <p class="pretitle pretitle--theme-light">in Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li
@@ -514,7 +536,7 @@
                 </li>
               </ul>
             </address>
-            <p class="pre-title pre-title-theme-dark">working hours</p>
+            <p class="pretitle pretitle--theme-dark">working hours</p>
             <p class="contacts-time">Every day from 9:00 to 22:00</p>
           </section>
         </div>
