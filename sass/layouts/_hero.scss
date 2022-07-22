@@ -1,0 +1,64 @@
+.hero__container {
+  display: flex;
+  background-image: url(../img/hero/slider-img.jpg);
+  background-size: 1070px 680px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.hero-content {
+  position: relative;
+  flex-grow: 1;
+  padding: 272px 100px 206px;
+}
+
+.hero-wrap {
+  position: relative;
+  width: 100px;
+}
+
+.hero-list {
+  position: absolute;
+  left: 27px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+
+.hero-list::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+
+.hero-subtitle {
+  margin-bottom: var(--typical-margin);
+}
+
+.hero-title {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: var(--typical-margin);
+}
+
+.hero-after-title {
+  color: #9da4bd;
+  max-width: 360px;
+}

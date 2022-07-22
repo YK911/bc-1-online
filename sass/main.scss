@@ -1,0 +1,31 @@
+// utils
+@import "./utils/variables";
+@import "./utils/normalize";
+@import "./utils/visually-hidden";
+
+// base
+@import "./base/common";
+@import "./base/reset";
+@import "./base/typography";
+
+// components
+@import "./components/section";
+@import "./components/container";
+@import "./components/button";
+@import "./components/slider";
+@import "./components/overlay";
+@import "./components/socials";
+@import "./components/modal";
+@import "./components/form";
+
+// layouts
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/about";
+@import "./layouts/prices";
+@import "./layouts/benefits";
+@import "./layouts/barbers";
+@import "./layouts/gallery";
+@import "./layouts/online";
+@import "./layouts/contacts";
+@import "./layouts/footer";
