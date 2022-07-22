@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Barbershop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,13 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /> -->
     <!-- Бібліотека з анімаціями на keyframes -->
     <link
       rel="stylesheet"
@@ -27,7 +26,8 @@
     <!-- Бібліотека з анімаціями із прив'язкою до скролу -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
 
   <body id="page">
@@ -39,10 +39,17 @@
         <nav class="nav">
           <ul class="header-list list">
             <li class="header-list__item">
-              <a class="header-list__link header-list__link--current link" href="#about"> About </a>
+              <a
+                class="header-list__link header-list__link--current link"
+                href="#about"
+              >
+                About
+              </a>
             </li>
             <li class="header-list__item">
-              <a class="header-list__link link" href="#prices">Services and prices</a>
+              <a class="header-list__link link" href="#prices"
+                >Services and prices</a
+              >
             </li>
             <li class="header-list__item">
               <a class="header-list__link link" href="#barbers">Barbers</a>
@@ -53,7 +60,9 @@
           </ul>
         </nav>
         <div class="header__connect">
-          <a href="tel:+380441111111" class="header__tel link">+38 044 111 11 11</a>
+          <a href="tel:+380441111111" class="header__tel link"
+            >+38 044 111 11 11</a
+          >
           <button
             class="btn header__btn animate__animated animate__shakeX animate__delay-2s"
             type="button"
@@ -70,22 +79,35 @@
           <div class="hero-wrap">
             <ul class="hero-list list">
               <li class="hero-item">
-                <a href="" target="_blank" rel="noopener noreferrer" class="hero-link link"
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hero-link link"
                   >Instagram</a
                 >
               </li>
               <li class="hero-item">
-                <a href="" target="_blank" rel="noopener noreferrer" class="hero-link link"
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hero-link link"
                   >Youtube</a
                 >
               </li>
             </ul>
           </div>
           <div class="hero-content">
-            <p class="pretitle pretitle--theme-dark">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title animate__animated animate__jackInTheBox">BarberShop</h1>
+            <p class="pretitle pretitle--theme-dark">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero-title animate__animated animate__jackInTheBox">
+              BarberShop
+            </h1>
             <p class="hero-subtitle subtitle subtitle--theme-dark">
-              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+              We are experts in trendy men’s haircuts. We work quickly,
+              carefully and with style.
             </p>
             <ul class="slider-controls list">
               <li class="slider-controls-item">
@@ -129,12 +151,14 @@
             <p class="about-pre-title pretitle pretitle--theme-light">About</p>
             <h2 class="about-title title">Best Barbershop in your city</h2>
             <p class="about-subtitle subtitle subtitle--theme-light">
-              If you want to add more confidence to your image, you should definitely visit us.
+              If you want to add more confidence to your image, you should
+              definitely visit us.
             </p>
             <p class="about-text">
-              We are a team that never stops at what has been achieved and are thirsty for changes.
-              And when you fall into the hands of our master, you will never be the same again. We
-              are a team that is always "on the same wave" with clients. Therefore, we are always
+              We are a team that never stops at what has been achieved and are
+              thirsty for changes. And when you fall into the hands of our
+              master, you will never be the same again. We are a team that is
+              always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
             <button type="button" class="about-btn btn">Online-booking</button>
@@ -143,7 +167,9 @@
       </section>
       <section class="prices section" data-aos="fade-up" id="prices">
         <div class="container">
-          <p class="pretitle pretitle--theme-dark">spend your time with the best masters</p>
+          <p class="pretitle pretitle--theme-dark">
+            spend your time with the best masters
+          </p>
           <h2 class="prices-title title">Services and prices</h2>
           <div class="prices-wrap">
             <ul class="prices-list list">
@@ -224,18 +250,22 @@
           </div>
 
           <div class="benefits-content">
-            <p class="benefits-pretitle pretitle pretitle--theme-light">old traditional school</p>
+            <p class="benefits-pretitle pretitle pretitle--theme-light">
+              old traditional school
+            </p>
             <h2 class="benefits-title title">Why people come to us?</h2>
             <p class="subtitle subtitle--theme-light">
-              Only good things are said about us. But it's better to see and feel 1 time than read
-              10 times.
+              Only good things are said about us. But it's better to see and
+              feel 1 time than read 10 times.
             </p>
           </div>
         </div>
       </section>
       <section class="barbers section" id="barbers">
         <div class="container">
-          <p class="pretitle pretitle--theme-light">for true enjoyers of the atmosphere</p>
+          <p class="pretitle pretitle--theme-light">
+            for true enjoyers of the atmosphere
+          </p>
           <h2 class="title barbers__title">Our barbers</h2>
           <ul class="barbers__list list">
             <li class="barbers__item">
@@ -247,8 +277,9 @@
                   width="370"
                 />
                 <p class="overlay__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis, natus. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Perspiciatis, natus.
                 </p>
               </div>
               <div class="barbers__item-wrap">
@@ -295,8 +326,9 @@
                   width="370"
                 />
                 <p class="overlay__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis, natus. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Perspiciatis, natus.
                 </p>
               </div>
               <div class="barbers__item-wrap">
@@ -343,8 +375,9 @@
                   width="370"
                 />
                 <p class="overlay__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, natus.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis, natus. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Perspiciatis, natus.
                 </p>
               </div>
               <div class="barbers__item-wrap">
@@ -387,7 +420,9 @@
       </section>
       <section class="gallery section">
         <div class="container">
-          <p class="pretitle pretitle--theme-light">in Latin, "barba" means "beard"</p>
+          <p class="pretitle pretitle--theme-light">
+            in Latin, "barba" means "beard"
+          </p>
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li
@@ -442,8 +477,14 @@
                   />
                   <span class="contacts-form-label">name&ast;</span>
                   <svg class="contacts-form-icon" width="20" height="20">
-                    <use class="icon-check" href="./img/sprite.svg#icon-check"></use>
-                    <use class="icon-alert" href="./img/sprite.svg#icon-alert"></use>
+                    <use
+                      class="icon-check"
+                      href="./img/sprite.svg#icon-check"
+                    ></use>
+                    <use
+                      class="icon-alert"
+                      href="./img/sprite.svg#icon-alert"
+                    ></use>
                   </svg>
                   <span class="message-alert">Minimum two characters</span>
                 </label>
@@ -477,12 +518,19 @@
                   checked
                 />
                 <span class="contacts-form-custom-checkbox">
-                  <svg class="contacts-form-checkbox-icon" width="17" height="13">
+                  <svg
+                    class="contacts-form-checkbox-icon"
+                    width="17"
+                    height="13"
+                  >
                     <use href="./img/sprite.svg#checkbox-check"></use>
                   </svg>
                 </span>
                 <span class="contacts-form-desc"
-                  >I accept <a class="contacts-form-policy" href="">Privacy policy</a></span
+                  >I accept
+                  <a class="contacts-form-policy" href=""
+                    >Privacy policy</a
+                  ></span
                 >
               </label>
 
@@ -547,12 +595,20 @@
         <p class="footer-copy">&copy; Copyright 2020</p>
         <ul class="footer-list list">
           <li class="footer-item">
-            <a href="" target="_blank" class="footer-link link" rel="noopener noreferrer"
+            <a
+              href=""
+              target="_blank"
+              class="footer-link link"
+              rel="noopener noreferrer"
               >Instagram</a
             >
           </li>
           <li class="footer-item">
-            <a href="" target="_blank" class="footer-link link" rel="noopener noreferrer"
+            <a
+              href=""
+              target="_blank"
+              class="footer-link link"
+              rel="noopener noreferrer"
               >Youtube</a
             >
           </li>
