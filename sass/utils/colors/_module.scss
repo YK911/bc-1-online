@@ -1,0 +1,6 @@
+@import './text';
+@import './background';
+
+@function getColor($type, $key) {
+  @return map-get($type, $key);
+}

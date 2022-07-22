@@ -1,0 +1,21 @@
+@import './decimals';
+
+@mixin section($padding-top: 130px, $padding-bottom: 130px) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+@mixin fonts($fw: 400, $fz: 16px, $lh: 1.15, $ls: false) {
+  @if ($fw) {
+    font-weight: $fw;
+  }
+  @if ($fz) {
+    font-size: $fz;
+  }
+  @if ($lh) {
+    line-height: decimal-round($lh / $fz, 2);
+  }
+  @if ($ls) {
+    letter-spacing: $ls;
+  }
+}

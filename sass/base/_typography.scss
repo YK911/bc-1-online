@@ -4,21 +4,24 @@
   align-items: center;
   gap: 20px;
 
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  // font-weight: 600;
+  // font-size: 11px;
+  // line-height: 1.36;
+  // letter-spacing: 0.1em;
+  // text-transform: uppercase;
+
+  @include fonts(600, 18px, 30px);
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     width: 60px;
     height: 1px;
   }
 
   &--theme-light {
-    color: #303030;
+    color: getColor($txt, second-title-cl);
+    color: var(--second-title-color);
 
     &::before {
       background-color: #303030;
@@ -49,7 +52,7 @@
 }
 
 .title {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-size: 42px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;

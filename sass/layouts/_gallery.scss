@@ -1,3 +1,8 @@
+.gallery {
+  // @extend %section;
+
+  @include section(100px, 120px);
+}
 .gallery-pre-title {
   color: #303030;
   margin-bottom: 44px;
