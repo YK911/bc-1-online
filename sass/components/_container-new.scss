@@ -1,26 +1,21 @@
 .container {
+  // mobile screen styles
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
-  // width: 100%;
-
   outline: 1px solid red;
   outline-offset: -1px;
 
-  // breakpoint mobile
-  @media screen and (min-width: 480px) {
-    width: 448px;
-  }
-
-  // breakpoint tablet
+  // tablet screen styles
   @media screen and (min-width: 768px) {
-    width: 720px;
+    max-width: 720px;
   }
 
-  // breakpoint desktop
+  // desktop screen styles
   @media screen and (min-width: 1200px) {
-    width: 1200px;
+    max-width: 1200px;
   }
 }

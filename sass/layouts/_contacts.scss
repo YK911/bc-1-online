@@ -3,6 +3,22 @@
   padding-left: 100px;
 }
 
+.contacts-wrap {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #191c26;
+  background-image: url(../img/contacts/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+}
+
+.contacts-wrap .container {
+  display: flex;
+}
+
 .contacts-title {
   color: var(--first-title-color);
   margin-bottom: 40px;
@@ -12,6 +28,7 @@
   max-width: 270px;
   margin-bottom: 70px;
 }
+
 .contacts-address-item {
   margin-bottom: var(--typical-margin);
   display: inline-flex;
