@@ -4,13 +4,8 @@
   align-items: center;
   gap: 20px;
 
-  // font-weight: 600;
-  // font-size: 11px;
-  // line-height: 1.36;
-  // letter-spacing: 0.1em;
-  // text-transform: uppercase;
-
-  @include fonts(600, 18px, 30px);
+  @include fonts(600, 11px, 15px, 0.1em);
+  text-transform: uppercase;
 
   &::before {
     content: '';
@@ -20,7 +15,6 @@
   }
 
   &--theme-light {
-    color: getColor($txt, second-title-cl);
     color: var(--second-title-color);
 
     &::before {
@@ -38,9 +32,13 @@
 }
 
 .subtitle {
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 
   &--theme-light {
     color: #303030;
@@ -53,7 +51,11 @@
 
 .title {
   font-family: 'Raleway';
-  font-size: 42px;
+  font-size: 28px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 42px;
+  }
 }
