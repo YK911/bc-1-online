@@ -25,11 +25,11 @@
 
   flex-basis: calc((100% - 0px) / 1);
 
-  @include mq(tablet) {
+  @include mq(tab) {
     flex-basis: calc((100% - 30px) / 2);
   }
 
-  @include mq(desktop) {
+  @include mq(desk) {
     flex-basis: calc((100% - 90px) / 4);
   }
 }
