@@ -181,7 +181,7 @@
           </div>
         </div>
       </section>
-      <!-- <section class="prices" data-aos="fade-up" id="prices">
+      <section class="prices" id="prices">
         <div class="container">
           <p class="pretitle pretitle--theme-dark">spend your time with the best masters</p>
           <h2 class="prices-title title">Services and prices</h2>
@@ -226,7 +226,7 @@
 
           <button type="button" class="prices-btn btn">Online-booking</button>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="benefits">
         <div class="container">
           <div class="benefits-cards">
@@ -431,16 +431,144 @@
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img src="./img/gallary-img-1.jpeg" alt="gallery 1" />
+              <!-- Дескриптор х -->
+              <!-- <img
+                srcset="./img/gallery/img-1_sm.jpg 1x, ./img/gallery/img-1_sm@2x.jpg 2x"
+                src="./img/gallery/img-1_sm.jpg"
+                alt="gallery 1"
+                width="418"
+                height="360"
+              /> -->
+
+              <!-- Дескриптор w -->
+              <!-- <img
+                srcset="
+                  ./img/gallery/w/img-1_270.jpg 270w,
+                  ./img/gallery/w/img-1_330.jpg 330w,
+                  ./img/gallery/w/img-1_418.jpg 418w,
+                  ./img/gallery/w/img-1_540.jpg 540w,
+                  ./img/gallery/w/img-1_660.jpg 660w,
+                  ./img/gallery/w/img-1_836.jpg 836w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
+                src="./img/gallery/w/img-1_418.jpg"
+                alt="gallery 1"
+                width="418"
+                height="360"
+                loading="lazy"
+              /> -->
+
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./img/gallery/img-1_lg.webp 1x, ./img/gallery/img-1_lg@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./img/gallery/img-1_lg.jpg 1x, ./img/gallery/img-1_lg@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./img/gallery/img-1_md.webp 1x, ./img/gallery/img-1_md@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./img/gallery/img-1_md.jpg 1x, ./img/gallery/img-1_md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./img/gallery/img-1_sm.webp 1x, ./img/gallery/img-1_sm@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./img/gallery/img-1_sm.jpg 1x, ./img/gallery/img-1_sm@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./img/gallery/img-1_sm.jpg"
+                  alt="gallery 1"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img src="./img/gallary-img-2.jpeg" alt="gallery 2" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./img/gallery/img-2_lg.jpg 1x, ./img/gallery/img-2_lg@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./img/gallery/img-2_md.jpg 1x, ./img/gallery/img-2_md@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./img/gallery/img-2_sm.jpg 1x, ./img/gallery/img-2_sm@2x.jpg 2x"
+                />
+                <img
+                  src="./img/gallery/img-2_sm.jpg"
+                  alt="gallery 2"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img src="./img/gallary-img-3.jpeg" alt="gallery 3" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./img/gallery/img-3_lg.jpg 1x, ./img/gallery/img-3_lg@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./img/gallery/img-3_md.jpg 1x, ./img/gallery/img-3_md@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./img/gallery/img-3_sm.jpg 1x, ./img/gallery/img-3_sm@2x.jpg 2x"
+                />
+                <img
+                  src="./img/gallery/img-3_sm.jpg"
+                  alt="gallery 3"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img src="./img/gallary-img-4.jpeg" alt="gallery 4" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./img/gallery/img-4_lg.jpg 1x, ./img/gallery/img-4_lg@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./img/gallery/img-4_md.jpg 1x, ./img/gallery/img-4_md@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./img/gallery/img-4_sm.jpg 1x, ./img/gallery/img-4_sm@2x.jpg 2x"
+                />
+                <img
+                  src="./img/gallery/img-4_sm.jpg"
+                  alt="gallery 2"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
