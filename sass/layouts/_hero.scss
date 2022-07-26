@@ -1,6 +1,6 @@
 .hero__container {
   display: flex;
-  background-image: url(../img/hero/slider-img.jpg);
+  background-image: url('../img/hero/slider-img.jpg');
   background-size: 1070px 680px;
   background-repeat: no-repeat;
   background-position: top right;
@@ -29,7 +29,7 @@
 }
 
 .hero-list::before {
-  content: "";
+  content: '';
   display: block;
   width: 60px;
   height: 1px;
@@ -49,7 +49,7 @@
 }
 
 .hero-title {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-weight: 700;
   font-size: 72px;
   line-height: calc(85 / 72);

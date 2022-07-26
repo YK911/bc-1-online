@@ -4,20 +4,22 @@
   left: 0;
   z-index: 10;
   width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-  transition: background-color var(--anim-fast),
-    backdrop-filter var(--anim-fast);
-}
+  background-color: rgba(48, 48, 48, 0.466);
 
-.header--no-transparency {
-  background-color: rgba(25, 28, 38, 0.4);
-  backdrop-filter: blur(6px);
-}
+  transition: background-color var(--anim-fast), backdrop-filter var(--anim-fast);
 
-.header__logo {
-  margin-right: 80px;
+  @include mq(desk) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &--no-transparency {
+    background-color: rgba(25, 28, 38, 0.4);
+    backdrop-filter: blur(6px);
+  }
 }
 
 .header__container {
@@ -25,12 +27,34 @@
   align-items: center;
 }
 
-.header-list {
-  display: flex;
+.header__logo {
+  @include mq(tab) {
+    margin-right: 64px;
+  }
+  @include mq(desk) {
+    margin-right: 80px;
+  }
 }
 
-.header-list__item:not(:last-child) {
-  margin-right: 30px;
+.logo__icon {
+  fill: #fff;
+
+  @include mq(tab) {
+    fill: #303030;
+  }
+}
+
+.header-list {
+  display: none;
+
+  @include mq(tab) {
+    display: flex;
+    gap: 23px;
+  }
+
+  @include mq(desk) {
+    gap: 30px;
+  }
 }
 
 .header-list__link {
@@ -42,6 +66,12 @@
   color: var(--header-color);
 
   transition: color var(--anim-fast);
+
+  span {
+    @include mq(tab-only) {
+      display: none;
+    }
+  }
 }
 
 .header-list__link:hover,
@@ -54,7 +84,7 @@
 }
 
 .header-list__link--current::after {
-  content: "";
+  content: '';
 
   position: absolute;
   bottom: -20px;
@@ -68,18 +98,31 @@
 }
 
 .header__connect {
-  margin-left: auto;
+  display: none;
+
+  @include mq(tab) {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: auto;
+  }
 }
 
 .header__tel {
-  position: relative;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  color: var(--header-color);
+  display: none;
 
-  transition: color var(--anim-fast);
+  @include mq(desk) {
+    position: relative;
+    display: block;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: var(--header-color);
+
+    transition: color var(--anim-fast);
+  }
 }
 
 .header__btn {
